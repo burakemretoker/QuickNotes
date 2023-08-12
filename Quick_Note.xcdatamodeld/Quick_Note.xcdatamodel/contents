@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Files" representedClassName="Files" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="goToNotes" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="Files" inverseName="goToNotes" inverseEntity="Files"/>
+    </entity>
+    <entity name="Notes" representedClassName="Notes" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="goToFiles" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Notes" inverseName="goToFiles" inverseEntity="Notes"/>
+    </entity>
+</model>
